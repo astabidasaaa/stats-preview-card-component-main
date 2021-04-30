@@ -1,0 +1,193 @@
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(233, 47%, 7%);
+  font-size: 15px;
+  font-family: Inter;
+  overflow: auto;
+}
+
+#card {
+  background-color: hsl(244, 38%, 16%);
+  width: auto;
+  border-radius: 8px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+#card #content {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 0rem 3.5rem;
+  width: 400px;
+}
+
+#card #content h1 {
+  font: 700 1.6rem/2rem Inter;
+  color: hsl(0, 0%, 100%);
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+#card #content h1 span {
+  color: hsl(277, 64%, 61%);
+}
+
+#card #content p {
+  width: 90%;
+  font: 400 14px/1.2rem Inter;
+  color: hsla(0, 0%, 100%, 0.75);
+  margin-bottom: 3.5rem;
+}
+
+#stats {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 25px 25px;
+  grid-template-areas:
+    "a   c   e"
+    "b   d   f";
+  align-items: end;
+}
+
+.num1 {
+  grid-area: a;
+}
+.num2 {
+  grid-area: b;
+}
+.num3 {
+  grid-area: c;
+}
+.num4 {
+  grid-area: d;
+}
+.num5 {
+  grid-area: e;
+}
+.num6 {
+  grid-area: f;
+}
+
+.number {
+  font: 700 1rem/1rem Inter;
+  color: hsl(0, 0%, 100%);
+}
+
+.thing {
+  font: 400 0.6rem/0.6rem Lexend Deca;
+  color: hsla(0, 0%, 100%, 0.6);
+}
+
+#card #picture {
+  height: 420px;
+  position: relative;
+  background-color: hsla(277, 64%, 61%, 60%);
+}
+
+#card #picture img {
+  height: 420px;
+  margin-bottom: 0;
+  mix-blend-mode: soft-light;
+}
+
+@media screen and (max-width: 376px) {
+  body {
+    padding: 1rem 0;
+  }
+
+  #card {
+    flex-flow: column nowrap;
+    width: 90%;
+    margin: 10px;
+  }
+
+  #card #content {
+    order: 2;
+    width: 80%;
+    padding: 1.5rem 0;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  #card #content h1 {
+    font: 700 1.4rem/2rem Inter;
+  }
+
+  #card #content p {
+    font: 400 13px/1rem Inter;
+    margin-bottom: 2rem;
+  }
+
+  #stats {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(8, 25px);
+    grid-template-areas:
+      "a"
+      "b"
+      "."
+      "c"
+      "d"
+      "."
+      "e"
+      "f";
+    align-items: center;
+  }
+
+  .num1 {
+    grid-area: a;
+  }
+  .num2 {
+    grid-area: b;
+  }
+  .num3 {
+    grid-area: c;
+  }
+  .num4 {
+    grid-area: d;
+  }
+  .num5 {
+    grid-area: e;
+  }
+  .num6 {
+    grid-area: f;
+  }
+
+  .number {
+    font: 700 1rem/1rem Inter;
+    color: hsl(0, 0%, 100%);
+  }
+
+  .thing {
+    font: 400 0.6rem/0.6rem Lexend Deca;
+    color: hsla(0, 0%, 100%, 0.6);
+  }
+
+  #card #picture {
+    order: 1;
+    width: 323px;
+    height: 267px;
+  }
+
+  #card #picture img {
+    height: auto;
+    width: 323px;
+  }
+}
